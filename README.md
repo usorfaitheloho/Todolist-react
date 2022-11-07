@@ -12,7 +12,7 @@ This React to-do application was motivated by a React tutorial. I followed the t
 
 ## Live Demo
 
-[Live Demo Link](https://vickymarz.github.io/react-todo-app/)
+[Live Demo Link](https://reactttodolist.netlify.app/)
 
 ### Prerequisites
 
