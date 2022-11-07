@@ -1,16 +1,13 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import { BrowserRouter } from "react-router-dom"
-//component file
-import TodoContainer from "./functionBased/components/TodoContainer.js"
-import "./functionBased/App.css"
-
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <TodoContainer />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+	<React.StrictMode>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<App />
+		</BrowserRouter>
+	</React.StrictMode>,
+	document.getElementById('root'),
 )

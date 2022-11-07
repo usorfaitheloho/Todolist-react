@@ -1,28 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import Header from './functionBased/components/Header';
-import { v4 as uuid } from 'uuid';
-import './App.css';
-import TodosList from './functionBased/components/TodosList';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './functionBased/components/Navbar'
+import './App.css'
+import About from './pages/About'
+import NotMatch from './pages/NotMatch'
+import Homepage from './pages/Homepage'
+import SinglePage from './pages/SinglePage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+	return (
+		<>
+			<Navbar />
+			<Routes>
+				<Route exact path='/' element={<Homepage />} />
+				<Route path='about' element={<About />}>
+					<Route path=':slug' element={<SinglePage />} />
+				</Route>
+				<Route path='*' element={<NotMatch />} />
+			</Routes>
+		</>
+	)
 }
 
-export default App;
+export default App
