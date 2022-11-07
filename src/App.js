@@ -1,5 +1,8 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react'
+import Header from './functionBased/components/Header';
+import { v4 as uuid } from 'uuid';
 import './App.css';
+import TodosList from './functionBased/components/TodosList';
 
 function App() {
   return (
